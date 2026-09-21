@@ -1,0 +1,91 @@
+# ==========================================
+# pnpm & Package Managers
+# ==========================================
+node_modules/
+.pnpm-store/
+.modules.yaml
+package-lock.json
+yarn.lock
+pnpm-lock.yaml.log
+
+# ==========================================
+# NestJS (Backend)
+# ==========================================
+/dist/
+/artifacts/
+*.tsbuildinfo
+
+# ==========================================
+# ReactJS (Frontend - Vite / Next.js / CRA)
+# ==========================================
+/dist-ssr/
+/build/
+/.next/
+/.vuepress/.temp/
+/.vuepress/.cache/
+/out/
+
+# Vite specific
+dist
+*.local
+
+# ==========================================
+# PostgreSQL & Database
+# ==========================================
+# Ignore local database data dumps or local Docker volumes
+.db_data/
+postgres_data/
+*.sql
+*.dump
+
+# ==========================================
+# Environment & Secrets (CRITICAL)
+# ==========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# ==========================================
+# IDEs & System Files
+# ==========================================
+# OS Files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+
+# JetBrains (WebStorm, IntelliJ)
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ==========================================
+# Logs & Diagnostics
+# ==========================================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+# ==========================================
+# Testing & Coverage
+# ==========================================
+/coverage/
+/.nyc_output/
+.jest/
+cypress/videos/
+cypress/screenshots/
+.playwright/
