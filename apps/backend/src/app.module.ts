@@ -5,6 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { KycModule } from './kyc/kyc.module';
 
 const DEFAULT_PORTS: Record<string, number> = {
   postgres: 5432,
@@ -30,12 +31,13 @@ const DEFAULT_PORTS: Record<string, number> = {
           password: config.get<string>('DB_PASSWORD', 'postgres'),
           database: config.get<string>('DB_NAME', 'kyc'),
           autoLoadEntities: true,
-          synchronize: config.get<string>('NODE_ENV', 'development') !== 'production',
+          synchronize: false,
         };
       },
     }),
     UsersModule,
     AuthModule,
+    KycModule,
   ],
   controllers: [AppController],
   providers: [AppService],
